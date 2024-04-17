@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <h1 style="text align:center;color:red;"><strong>Major Historical Events</strong></h1>
+    <link rel="stylesheet" href="styles.css">
+    <title>Interactive Timeline</title>
+    <style>
+        /* Style for the timeline */
+        .timeline {
+            position: relative;
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0;
+        }
+
+        .timeline-item {
+            padding: 30px;
+            background-color:5BBCFF;
+            border-left: 4px solid #333;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -10px;
+            width: 20px;
+            height: 20px;
+            background-color:red;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="timeline">
+    <div class="timeline-item" data-year="1761">
+        <h3>Year 1761</h3>
+        <a href="events.html#1761">1761</a>
+        <p>Third and last battle of panipat.</p>
+    </div>
+    <div class="timeline-item" data-year="1829">
+        <h3>Year 1829</h3>
+        <a href="events.html#1829">1829</a>
+        <p>Prohibition of sati.</p>
+    </div>
+    <div class="timeline-item" data-year="1905">
+        <h3>Year 1905</h3>
+        <a href="events.html#1905">1905</a>
+        <p>Partition of Bengal.</p>
+    </div>
+    <div class="timeline-item" data-year="1930">
+        <h3>Year 1930</h3>
+        <a href="events.html#1930">1930</a>
+        <p>Dandi March.</p>
+    </div>
+    <div class="timeline-item" data-year="1931">
+        <h3>Year 1931</h3>
+        <a href="events.html#1931">1931</a>
+        <p>Pact between Gandhi and Irwin.</p>
+    </div>
+    <div class="timeline-item" data-year="1935">
+        <h3>Year 1935</h3>
+        <a href="events.html#1935">1935</a>
+        <p>Government of India act.</p>
+    </div>
+    <div class="timeline-item" data-year="1945">
+        <h3>Year 1945</h3>
+        <a href="events.html#1945">1945</a>
+        <p>Trial of the national army.</p>
+    </div>
+    <div class="timeline-item" data-year="1947">
+        <h3>Year 1947</h3>
+        <a href="events.html#1947">1947</a>
+        <p>Division of India.</p>
+    </div>
+</div>
+<script src="script.js">
+    document.addEventListener("DOMContentLoaded", function() {
+	var years = document.querySelectorAll(".year");
+	years.forEach(function(year) {
+		year.addEventListener("click", function() {
+			window.location.href = year.querySelector("a").href;
+		});
+	});
+});
+</script>
+</body>
+</html>
